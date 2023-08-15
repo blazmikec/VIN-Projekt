@@ -1,5 +1,5 @@
 # VIN-Projekt
-## Ideja
+## Ideja 
 Za projekt sem se odločil izdelati preprost sistem za prijavo, ki ga je mogoče uporabiti kot alternativo ključa v stanovalskih poslopjih. Uporabnik se enostavno prijavi z uporabniškim imenom ter geslom preko tipkovnice. Dodal sen tudi možnost dodajanja novih uporabnikov, ki omogoča boljši pregled delovanja. Za prikaz informacij sem uporabil LCD zaslon ter za izboljšanje uporabniške izkušnje sem dodal tudi piskač, ki z zvoki označuje stanje sistema. Vključen je tudi potenciometer, ki nadzira svetlost zaslona.
 ## Prikaz uporabe naprave (Povezava do videa)
 [![Prikaz delovanja](https://img.youtube.com/vi/gqiYvM1Tya4/maxresdefault.jpg)](https://youtu.be/gqiYvM1Tya4))

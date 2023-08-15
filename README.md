@@ -14,3 +14,14 @@ Za projekt sem se odločil izdelati preprost sistem za prijavo, ki ga je mogoče
 | Potenciometer | 1 |
 | Upor 220Ω | 2 |
 | Tipkovnica 4x4 | 1 |
+## Opis komponent
+> # Arduino Uno
+> <div> <img src="https://github.com/blazmikec/VIN-Projekt/assets/71345003/d4d6d820-9a51-410d-a3ce-6d286a71a8e7" width=75% height=75%> </div>
+>Je zmogljiv mikrokrmilnik, ki omogoča enostavno upravljanje raznolikih vhodno/izhodnih naprav. S pomočjo programskega okolja Arduino IDE lahko enostavno vključujemo že napisane knjižnice za posamezne komponente in odpravljamo morebitne programske napake.
+> # LCD 16x2
+> # Piskač (Piezo)
+> # Potenciometer
+> # Tipkovnica 4x4
+
+
+

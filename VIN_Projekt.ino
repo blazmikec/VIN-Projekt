@@ -1,8 +1,8 @@
 #include <LiquidCrystal.h>
 #include "Keypad.h"
 
-const byte ROWS = 4; // number of rows
-const byte COLS = 4; // number of columns
+const byte ROWS = 4;
+const byte COLS = 4;
 char keys[ROWS][COLS] = {
 {'1','2','3','A'},
 {'4','5','6','B'},
@@ -11,28 +11,28 @@ char keys[ROWS][COLS] = {
 };
 
 char key;
-byte rowPins[ROWS] = {9, 8, 7, 6}; // row pinouts of the keypad R1 = D8, R2 = D7, R3 = D6, R4 = D5
-byte colPins[COLS] = {5, 4, 3, 2};    // column pinouts of the keypad C1 = D4, C2 = D3, C3 = D2
+byte rowPins[ROWS] = {9, 8, 7, 6}; // row pinout R1 = D9, R2 = D8, R3 = D7, R4 = D6
+byte colPins[COLS] = {5, 4, 3, 2}; // column pinouts C1 = D5, C2 = D4, C3 = D3, C2 = D2
+
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+
 const int LCD_COLS = 16;
-const int rs = 12, en = 11, d4 = 17, d5 = 16, d6 = 15, d7 = 14;
+const int rs = 12, en = 11, d4 = 17, d5 = 16, d6 = 15, d7 = 14; //pinout A0-A3, D11, D12
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
-const int userNum = 2;
+const int userNum = 2; //Stevilo dovoljenih uporabnikov
 String users[userNum][2];
 
-const int buzzerPin = 10;
+const int buzzerPin = 10; //pinout piskac
 
 void setup() {
 
-  // set up the LCD's number of columns and rows:
   Serial.begin(9600);
   lcd.begin(LCD_COLS, 2);
   pinMode(buzzerPin, OUTPUT);
   playStartupSound();
 
 }
-
 
 char handleScrollingAndInput(const String& topRowText, const String& bottomRowText) {
   unsigned long lastScrollTime = 0;
@@ -59,7 +59,7 @@ char handleScrollingAndInput(const String& topRowText, const String& bottomRowTe
     key = keypad.getKey();
     if (key) {
       inputSound();
-      scrolling = false; // Stop scrolling
+      scrolling = false;
       pressedKey = key;
     }
   }
@@ -289,7 +289,5 @@ void loop() {
       login();
     }
   }
-  
-  
 }
 
